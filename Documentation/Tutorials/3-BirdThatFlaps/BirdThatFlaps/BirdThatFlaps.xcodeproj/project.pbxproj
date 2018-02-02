@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		46C30D52201D2C2B00925357 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C30D51201D2C2B00925357 /* UIColor+Custom.swift */; };
 		46C30D55201D2E1900925357 /* FlappyBirdy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C30D54201D2E1900925357 /* FlappyBirdy.ttf */; };
-		46C30DBF2023A87300925357 /* AccelerationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C30DBE2023A87300925357 /* AccelerationPlugin.swift */; };
 		46F89271201D0E8100EAA8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F89270201D0E8100EAA8B6 /* AppDelegate.swift */; };
 		46F89273201D0E8100EAA8B6 /* BirdThatFlapsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F89272201D0E8100EAA8B6 /* BirdThatFlapsScene.swift */; };
 		46F89275201D0E8100EAA8B6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 46F89274201D0E8100EAA8B6 /* Podfile */; };
@@ -42,7 +41,6 @@
 		03FC572FAF351CB8F2108431 /* Pods-BirdThatFlaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdThatFlaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps.debug.xcconfig"; sourceTree = "<group>"; };
 		46C30D51201D2C2B00925357 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		46C30D54201D2E1900925357 /* FlappyBirdy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlappyBirdy.ttf; sourceTree = "<group>"; };
-		46C30DBE2023A87300925357 /* AccelerationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationPlugin.swift; sourceTree = "<group>"; };
 		46F8926D201D0E8100EAA8B6 /* BirdThatFlaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdThatFlaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F89270201D0E8100EAA8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F89272201D0E8100EAA8B6 /* BirdThatFlapsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdThatFlapsScene.swift; sourceTree = "<group>"; };
@@ -103,14 +101,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		46C30DBD2023A80E00925357 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				46C30DBE2023A87300925357 /* AccelerationPlugin.swift */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
-		};
 		46F89264201D0E8100EAA8B6 = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				46F89270201D0E8100EAA8B6 /* AppDelegate.swift */,
-				46C30DBD2023A80E00925357 /* Plugins */,
 				46F8929E201D10D700EAA8B6 /* Scenes */,
 				46C30D50201D2C1E00925357 /* Extensions */,
 				46F8929D201D10BC00EAA8B6 /* Resources */,
@@ -394,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F89271201D0E8100EAA8B6 /* AppDelegate.swift in Sources */,
-				46C30DBF2023A87300925357 /* AccelerationPlugin.swift in Sources */,
 				46F892A2201D117900EAA8B6 /* MainMenuScene.swift in Sources */,
 				46C30D52201D2C2B00925357 /* UIColor+Custom.swift in Sources */,
 				46F89273201D0E8100EAA8B6 /* BirdThatFlapsScene.swift in Sources */,
