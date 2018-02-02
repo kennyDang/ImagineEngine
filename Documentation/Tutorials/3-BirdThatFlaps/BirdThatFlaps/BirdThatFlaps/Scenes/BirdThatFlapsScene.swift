@@ -37,8 +37,8 @@ final class BirdThatFlapsScene: Scene {
     var scoreCounter = 0
 
     enum CollisionType: String {
-        case Pipe = "Pipe"
-        case Coin = "Coin"
+        case pipe = "Pipe"
+        case coin = "Coin"
     }
 
     // MARK: - Setup methods
