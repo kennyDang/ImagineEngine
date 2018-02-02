@@ -17,14 +17,22 @@ final class BirdThatFlapsScene: Scene {
         let label = Label(text: "0")
         label.font = UIFont(name: "flappyBirdy", size: 80)!
         label.position = Point(x: center.x, y: center.y - 200)
+        label.zIndex = 10
 
         return label
     }()
 
-    var backgrounds = [Actor]()
+    lazy var backgroundActor: Actor = {
+        let actor = Actor(image: #imageLiteral(resourceName: "background"))
+        actor.size = size
+        actor.position = center
+
+        return actor
+    }()
+
+    var grounds = [Actor]()
     var hasGameStarted = false
     var isGameInProgress = false
-    var timer: Timer?
     var oldPosition: CGFloat = 0
     var scoreCounter = 0
 
@@ -36,25 +44,27 @@ final class BirdThatFlapsScene: Scene {
     // MARK: - Setup methods
 
     override func setup() {
-        setupBackground()
         addActors()
+        setupGround()
         setupBird()
         setupGame()
         setupCamera()
     }
 
-    private func setupBackground() {
+    private func setupGround() {
         for i in 0...2 {
-            let background = Actor(image: #imageLiteral(resourceName: "background"))
-            background.size = UIScreen.main.bounds.size
-            background.position = Point(x: CGFloat(i) * background.size.width, y: UIScreen.main.bounds.height / 2)
-            backgrounds.append(background)
+            let ground = Actor(image: #imageLiteral(resourceName: "Ground"))
+            ground.size = Size(width: size.width, height: 100)
+            ground.position = Point(x: ground.size.width * CGFloat(i), y: size.height - ground.size.height / 2)
+            ground.zIndex = 100
+            grounds.append(ground)
 
-            add(background)
+            add(ground)
         }
     }
 
     private func addActors() {
+        add(backgroundActor)
         add(bird)
         add(scoreCounterLabel)
     }
@@ -65,20 +75,21 @@ final class BirdThatFlapsScene: Scene {
     }
 
     private func setupGame() {
-        self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.createPipes), userInfo: nil, repeats: true)
+        timeline.repeat(withInterval: 3) {
+            self.createPipes()
+        }
 
         self.hasGameStarted = true
         self.isGameInProgress = true
 
-        for bg in self.backgrounds {
-            bg.velocity.dx = -100
+        for ground in self.grounds {
+            ground.velocity.dx = -100
         }
 
         observeBackgrounds()
         observePipeCollisions()
         observeClickCollisions()
         observeBirdMovement()
-        observeCoinCollisions()
     }
 
     private func setupCamera() {
@@ -92,12 +103,12 @@ final class BirdThatFlapsScene: Scene {
     // MARK: - Observe methods
 
     private func observeBackgrounds() {
-        guard let firstBackground = self.backgrounds.first else { return }
+        guard let ground = self.grounds.first else { return }
 
-        firstBackground.events.moved.observe {
-            for bg in self.backgrounds {
-                if bg.position.x < -(self.size.width) {
-                    bg.position.x += self.size.width * 3
+        ground.events.moved.observe {
+            for ground in self.grounds {
+                if ground.position.x < -(self.size.width) {
+                    ground.position.x += self.size.width * 3
                 }
             }
 
@@ -125,14 +136,6 @@ final class BirdThatFlapsScene: Scene {
         }
     }
 
-    private func observeCoinCollisions() {
-        bird.events.collided(withActorInGroup: Group.name("Coin")).observe { (actor, coin) in
-            coin.remove()
-            self.scoreCounter += 1
-            self.scoreCounterLabel.text = "\(self.scoreCounter)"
-        }
-    }
-
     private func observeClickCollisions() {
         events.clicked.observe {
             if self.isPaused {
@@ -157,7 +160,7 @@ final class BirdThatFlapsScene: Scene {
 
     @objc private func createPipes() {
         let randX = randomX()
-        let randomOffset = random(min: -200, max: 200)
+        let randomOffset = random(min: -50, max: 50)
         guard let pipeType = CollisionType(rawValue: "Pipe") else { return }
         guard let coinType = CollisionType(rawValue: "Coin") else { return }
         let pipeGroup = Group.enumValue(pipeType)
@@ -173,7 +176,7 @@ final class BirdThatFlapsScene: Scene {
 
         let bottomPipe = Actor(image: #imageLiteral(resourceName: "Pipe"))
         bottomPipe.size = Size(width: 20, height: 100)
-        bottomPipe.position = Point(x: randX, y: UIScreen.main.bounds.height)
+        bottomPipe.position = Point(x: randX, y: size.height)
         bottomPipe.velocity.dx = -130
         bottomPipe.scale = 0.5
         bottomPipe.rotation = -.pi
@@ -188,6 +191,12 @@ final class BirdThatFlapsScene: Scene {
 
         coin.group = coinGroup
 
+        coin.events.collided(with: bird).observe { (actor) in
+            actor.remove()
+            self.scoreCounter += 1
+            self.scoreCounterLabel.text = "\(self.scoreCounter)"
+        }
+
         add(topPipe)
         add(bottomPipe)
         add(coin)
@@ -195,12 +204,11 @@ final class BirdThatFlapsScene: Scene {
         timeline.after(interval: 5) {
             topPipe.remove()
             bottomPipe.remove()
-            coin.remove()
         }
     }
 
     private func randomX() -> CGFloat {
-        let screenWidth = UInt32(UIScreen.main.bounds.width)
+        let screenWidth = UInt32(size.width)
         let randomX = CGFloat(arc4random_uniform(500 - screenWidth) + screenWidth)
 
         return randomX
@@ -223,13 +231,13 @@ final class BirdThatFlapsScene: Scene {
         isPaused = false
         isGameInProgress = false
         hasGameStarted = false
-        timer?.invalidate()
         oldPosition = 0
         bird.velocity.dy = 0
         bird.position = center
-        backgrounds.removeAll()
+        grounds.removeAll()
         scoreCounterLabel.text = "0"
         scoreCounter = 0
+        scoreCounterLabel.remove()
         reset()
     }
 
