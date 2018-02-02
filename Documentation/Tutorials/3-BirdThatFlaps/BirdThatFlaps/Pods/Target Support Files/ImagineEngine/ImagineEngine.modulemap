@@ -1,0 +1,6 @@
+framework module ImagineEngine {
+  umbrella header "ImagineEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}

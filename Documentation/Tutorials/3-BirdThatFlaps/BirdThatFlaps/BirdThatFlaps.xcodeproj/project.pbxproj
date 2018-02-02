@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46C30D52201D2C2B00925357 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C30D51201D2C2B00925357 /* UIColor+Custom.swift */; };
+		46C30D55201D2E1900925357 /* FlappyBirdy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C30D54201D2E1900925357 /* FlappyBirdy.ttf */; };
+		46C30DBF2023A87300925357 /* AccelerationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C30DBE2023A87300925357 /* AccelerationPlugin.swift */; };
+		46F89271201D0E8100EAA8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F89270201D0E8100EAA8B6 /* AppDelegate.swift */; };
+		46F89273201D0E8100EAA8B6 /* BirdThatFlapsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F89272201D0E8100EAA8B6 /* BirdThatFlapsScene.swift */; };
+		46F89275201D0E8100EAA8B6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 46F89274201D0E8100EAA8B6 /* Podfile */; };
+		46F89277201D0E8100EAA8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F89276201D0E8100EAA8B6 /* Assets.xcassets */; };
+		46F8927A201D0E8100EAA8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F89278201D0E8100EAA8B6 /* LaunchScreen.storyboard */; };
+		46F89285201D0E8200EAA8B6 /* BirdThatFlapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F89284201D0E8200EAA8B6 /* BirdThatFlapsTests.swift */; };
+		46F89290201D0E8200EAA8B6 /* BirdThatFlapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8928F201D0E8200EAA8B6 /* BirdThatFlapsUITests.swift */; };
+		46F892A2201D117900EAA8B6 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F892A1201D117900EAA8B6 /* MainMenuScene.swift */; };
+		9A8C7582B3A43CE76D616AFC /* Pods_BirdThatFlaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8479F89B74DEB877278A5C /* Pods_BirdThatFlaps.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46F89281201D0E8200EAA8B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F89265201D0E8100EAA8B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46F8926C201D0E8100EAA8B6;
+			remoteInfo = BirdThatFlaps;
+		};
+		46F8928C201D0E8200EAA8B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F89265201D0E8100EAA8B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46F8926C201D0E8100EAA8B6;
+			remoteInfo = BirdThatFlaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03FC572FAF351CB8F2108431 /* Pods-BirdThatFlaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdThatFlaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps.debug.xcconfig"; sourceTree = "<group>"; };
+		46C30D51201D2C2B00925357 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		46C30D54201D2E1900925357 /* FlappyBirdy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlappyBirdy.ttf; sourceTree = "<group>"; };
+		46C30DBE2023A87300925357 /* AccelerationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationPlugin.swift; sourceTree = "<group>"; };
+		46F8926D201D0E8100EAA8B6 /* BirdThatFlaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdThatFlaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F89270201D0E8100EAA8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46F89272201D0E8100EAA8B6 /* BirdThatFlapsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdThatFlapsScene.swift; sourceTree = "<group>"; };
+		46F89274201D0E8100EAA8B6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		46F89276201D0E8100EAA8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46F89279201D0E8100EAA8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46F8927B201D0E8100EAA8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F89280201D0E8200EAA8B6 /* BirdThatFlapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdThatFlapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F89284201D0E8200EAA8B6 /* BirdThatFlapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdThatFlapsTests.swift; sourceTree = "<group>"; };
+		46F89286201D0E8200EAA8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F8928B201D0E8200EAA8B6 /* BirdThatFlapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdThatFlapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F8928F201D0E8200EAA8B6 /* BirdThatFlapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdThatFlapsUITests.swift; sourceTree = "<group>"; };
+		46F89291201D0E8200EAA8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46F892A1201D117900EAA8B6 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		8F859E02BC9CAFCC33626FB8 /* Pods-BirdThatFlaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdThatFlaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps.release.xcconfig"; sourceTree = "<group>"; };
+		BA8479F89B74DEB877278A5C /* Pods_BirdThatFlaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdThatFlaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46F8926A201D0E8100EAA8B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8C7582B3A43CE76D616AFC /* Pods_BirdThatFlaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F8927D201D0E8100EAA8B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F89288201D0E8200EAA8B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46C30D50201D2C1E00925357 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46C30D51201D2C2B00925357 /* UIColor+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		46C30D53201D2E0B00925357 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46C30D54201D2E1900925357 /* FlappyBirdy.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		46C30DBD2023A80E00925357 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				46C30DBE2023A87300925357 /* AccelerationPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		46F89264201D0E8100EAA8B6 = {
+			isa = PBXGroup;
+			children = (
+				46F8926F201D0E8100EAA8B6 /* BirdThatFlaps */,
+				46F89283201D0E8200EAA8B6 /* BirdThatFlapsTests */,
+				46F8928E201D0E8200EAA8B6 /* BirdThatFlapsUITests */,
+				46F8926E201D0E8100EAA8B6 /* Products */,
+				808F766DE16367F23592966F /* Pods */,
+				C0740598751C05A86A810067 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		46F8926E201D0E8100EAA8B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46F8926D201D0E8100EAA8B6 /* BirdThatFlaps.app */,
+				46F89280201D0E8200EAA8B6 /* BirdThatFlapsTests.xctest */,
+				46F8928B201D0E8200EAA8B6 /* BirdThatFlapsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46F8926F201D0E8100EAA8B6 /* BirdThatFlaps */ = {
+			isa = PBXGroup;
+			children = (
+				46F89270201D0E8100EAA8B6 /* AppDelegate.swift */,
+				46C30DBD2023A80E00925357 /* Plugins */,
+				46F8929E201D10D700EAA8B6 /* Scenes */,
+				46C30D50201D2C1E00925357 /* Extensions */,
+				46F8929D201D10BC00EAA8B6 /* Resources */,
+			);
+			path = BirdThatFlaps;
+			sourceTree = "<group>";
+		};
+		46F89283201D0E8200EAA8B6 /* BirdThatFlapsTests */ = {
+			isa = PBXGroup;
+			children = (
+				46F89284201D0E8200EAA8B6 /* BirdThatFlapsTests.swift */,
+				46F89286201D0E8200EAA8B6 /* Info.plist */,
+			);
+			path = BirdThatFlapsTests;
+			sourceTree = "<group>";
+		};
+		46F8928E201D0E8200EAA8B6 /* BirdThatFlapsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46F8928F201D0E8200EAA8B6 /* BirdThatFlapsUITests.swift */,
+				46F89291201D0E8200EAA8B6 /* Info.plist */,
+			);
+			path = BirdThatFlapsUITests;
+			sourceTree = "<group>";
+		};
+		46F8929D201D10BC00EAA8B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C30D53201D2E0B00925357 /* Fonts */,
+				46F89274201D0E8100EAA8B6 /* Podfile */,
+				46F89276201D0E8100EAA8B6 /* Assets.xcassets */,
+				46F89278201D0E8100EAA8B6 /* LaunchScreen.storyboard */,
+				46F8927B201D0E8100EAA8B6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		46F8929E201D10D700EAA8B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				46F89272201D0E8100EAA8B6 /* BirdThatFlapsScene.swift */,
+				46F892A1201D117900EAA8B6 /* MainMenuScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		808F766DE16367F23592966F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03FC572FAF351CB8F2108431 /* Pods-BirdThatFlaps.debug.xcconfig */,
+				8F859E02BC9CAFCC33626FB8 /* Pods-BirdThatFlaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0740598751C05A86A810067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA8479F89B74DEB877278A5C /* Pods_BirdThatFlaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46F8926C201D0E8100EAA8B6 /* BirdThatFlaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F89294201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlaps" */;
+			buildPhases = (
+				3D7C71692603D600C2CD56C8 /* [CP] Check Pods Manifest.lock */,
+				46F89269201D0E8100EAA8B6 /* Sources */,
+				46F8926A201D0E8100EAA8B6 /* Frameworks */,
+				46F8926B201D0E8100EAA8B6 /* Resources */,
+				4CE1689BAB29E58EC3C7A314 /* [CP] Embed Pods Frameworks */,
+				4FCEBA7D63D1F0AEE702DDB1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BirdThatFlaps;
+			productName = BirdThatFlaps;
+			productReference = 46F8926D201D0E8100EAA8B6 /* BirdThatFlaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46F8927F201D0E8100EAA8B6 /* BirdThatFlapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F89297201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlapsTests" */;
+			buildPhases = (
+				46F8927C201D0E8100EAA8B6 /* Sources */,
+				46F8927D201D0E8100EAA8B6 /* Frameworks */,
+				46F8927E201D0E8100EAA8B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46F89282201D0E8200EAA8B6 /* PBXTargetDependency */,
+			);
+			name = BirdThatFlapsTests;
+			productName = BirdThatFlapsTests;
+			productReference = 46F89280201D0E8200EAA8B6 /* BirdThatFlapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		46F8928A201D0E8200EAA8B6 /* BirdThatFlapsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F8929A201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlapsUITests" */;
+			buildPhases = (
+				46F89287201D0E8200EAA8B6 /* Sources */,
+				46F89288201D0E8200EAA8B6 /* Frameworks */,
+				46F89289201D0E8200EAA8B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46F8928D201D0E8200EAA8B6 /* PBXTargetDependency */,
+			);
+			name = BirdThatFlapsUITests;
+			productName = BirdThatFlapsUITests;
+			productReference = 46F8928B201D0E8200EAA8B6 /* BirdThatFlapsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F89265201D0E8100EAA8B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kenny Dang";
+				TargetAttributes = {
+					46F8926C201D0E8100EAA8B6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					46F8927F201D0E8100EAA8B6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46F8926C201D0E8100EAA8B6;
+					};
+					46F8928A201D0E8200EAA8B6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46F8926C201D0E8100EAA8B6;
+					};
+				};
+			};
+			buildConfigurationList = 46F89268201D0E8100EAA8B6 /* Build configuration list for PBXProject "BirdThatFlaps" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46F89264201D0E8100EAA8B6;
+			productRefGroup = 46F8926E201D0E8100EAA8B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46F8926C201D0E8100EAA8B6 /* BirdThatFlaps */,
+				46F8927F201D0E8100EAA8B6 /* BirdThatFlapsTests */,
+				46F8928A201D0E8200EAA8B6 /* BirdThatFlapsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46F8926B201D0E8100EAA8B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F8927A201D0E8100EAA8B6 /* LaunchScreen.storyboard in Resources */,
+				46C30D55201D2E1900925357 /* FlappyBirdy.ttf in Resources */,
+				46F89277201D0E8100EAA8B6 /* Assets.xcassets in Resources */,
+				46F89275201D0E8100EAA8B6 /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F8927E201D0E8100EAA8B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F89289201D0E8200EAA8B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D7C71692603D600C2CD56C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BirdThatFlaps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CE1689BAB29E58EC3C7A314 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ImagineEngine/ImagineEngine.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagineEngine.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FCEBA7D63D1F0AEE702DDB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BirdThatFlaps/Pods-BirdThatFlaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46F89269201D0E8100EAA8B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F89271201D0E8100EAA8B6 /* AppDelegate.swift in Sources */,
+				46C30DBF2023A87300925357 /* AccelerationPlugin.swift in Sources */,
+				46F892A2201D117900EAA8B6 /* MainMenuScene.swift in Sources */,
+				46C30D52201D2C2B00925357 /* UIColor+Custom.swift in Sources */,
+				46F89273201D0E8100EAA8B6 /* BirdThatFlapsScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F8927C201D0E8100EAA8B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F89285201D0E8200EAA8B6 /* BirdThatFlapsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46F89287201D0E8200EAA8B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F89290201D0E8200EAA8B6 /* BirdThatFlapsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46F89282201D0E8200EAA8B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46F8926C201D0E8100EAA8B6 /* BirdThatFlaps */;
+			targetProxy = 46F89281201D0E8200EAA8B6 /* PBXContainerItemProxy */;
+		};
+		46F8928D201D0E8200EAA8B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46F8926C201D0E8100EAA8B6 /* BirdThatFlaps */;
+			targetProxy = 46F8928C201D0E8200EAA8B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46F89278201D0E8100EAA8B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46F89279201D0E8100EAA8B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46F89292201D0E8200EAA8B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46F89293201D0E8200EAA8B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46F89295201D0E8200EAA8B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FC572FAF351CB8F2108431 /* Pods-BirdThatFlaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/BirdThatFlaps/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46F89296201D0E8200EAA8B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F859E02BC9CAFCC33626FB8 /* Pods-BirdThatFlaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/BirdThatFlaps/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46F89298201D0E8200EAA8B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BirdThatFlapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BirdThatFlaps.app/BirdThatFlaps";
+			};
+			name = Debug;
+		};
+		46F89299201D0E8200EAA8B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BirdThatFlapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BirdThatFlaps.app/BirdThatFlaps";
+			};
+			name = Release;
+		};
+		46F8929B201D0E8200EAA8B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BirdThatFlapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BirdThatFlaps;
+			};
+			name = Debug;
+		};
+		46F8929C201D0E8200EAA8B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BirdThatFlapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frooctus.BirdThatFlapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BirdThatFlaps;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46F89268201D0E8100EAA8B6 /* Build configuration list for PBXProject "BirdThatFlaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F89292201D0E8200EAA8B6 /* Debug */,
+				46F89293201D0E8200EAA8B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F89294201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F89295201D0E8200EAA8B6 /* Debug */,
+				46F89296201D0E8200EAA8B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F89297201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F89298201D0E8200EAA8B6 /* Debug */,
+				46F89299201D0E8200EAA8B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F8929A201D0E8200EAA8B6 /* Build configuration list for PBXNativeTarget "BirdThatFlapsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F8929B201D0E8200EAA8B6 /* Debug */,
+				46F8929C201D0E8200EAA8B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F89265201D0E8100EAA8B6 /* Project object */;
+}
